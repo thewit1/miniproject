@@ -1,0 +1,58 @@
+<!-- ## The html code of the form goes here -->
+<!-- ## This is included in the Index.html page using "include('Form')" function -->
+
+ <div class="card text-black mb-12" style="max-width: 90rem; background-color:#FFF0F5">
+ <iframe width="1100" height="900" src="https://datastudio.google.com/embed/reporting/aee3fd38-d475-4b50-bcbc-4a61b21ec3f1/page/9pKeC" frameborder="0" style="border:0" allowfullscreen></iframe>
+<form id="myForm" class="p-2 border border-light rounded bg-green" onsubmit="handleFormSubmit(this)"> <!-- Call JavaScript function "handleFormSubmit" -->
+    <p class="h4 mb-4 text-center">ระบบจองห้องประชุม</p>
+    <div id="message"></div>
+    <input type="text" id="RecId" name="RecId" value="" style="display: none">
+	<div class="form-group">
+		<label for="name" >ชื่อ สกุล</label>
+		<input type="text" class="form-control" id="name" name="name" placeholder="ชื่อ สกุล" required>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<p>เพศ</p>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="gender" id="male" value="ชาย">
+				<label class="form-check-label" for="male">ชาย</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="gender" id="female" value="หญิง">
+				<label class="form-check-label" for="female">หญิง</label>
+			</div>
+		</div>
+                <div class="form-group col-md-3">
+			<label for="dateOfBirth">เวลา</label>
+			<input type="time" class="form-control" id="dateOfTime" name="dateOfTime">
+		</div>
+		<div class="form-group col-md-3">
+			<label for="dateOfBirth">วันที่ทำการจอง</label>
+			<input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
+		</div>
+
+	</div>
+	<div class="form-group">
+		<label for="email">อีเมล</label>
+		<input type="email" class="form-control" id="email" name="email" placeholder="อีเมล">
+	</div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="phone">เบอร์โทร</label>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="เบอร์โทร">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlSelect1">ห้องประชุม</label>
+        <select class="form-control" id="type" name="type">
+          <option>เลือกห้องประชุม</option>
+        </select>
+      </div>
+  
+    </div>
+	<button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
+    <input class="btn btn-secondary" type="reset" value="รีเซ็ต">
+    
+ 
+</form>
+</div>
